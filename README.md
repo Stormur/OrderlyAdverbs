@@ -4,7 +4,9 @@ Code and materials associated to the paper "Let's do it orderly: a proposal for 
 
 ## Explanation of files and codes 
 
-The main script is `ADVextractor.py`, which is meant to be launched from this repository by giving the path to a single CoNLL-U file, a folder containing CoNLL-U files, or a mixture of both. The script then proceeds to create a folder which contains different files with statistics about adverbs (`ADV`) in the data. Outputs for all the treebanks discussed in the paper are already provided. 
+The main script is `ADVextractor.py`, which is meant to be launched from this repository by giving the path to a single CoNLL-U file, a folder containing CoNLL-U files, or a mixture of both. The script then proceeds to create a folder which contains different files with statistics about adverbs (`ADV`) in the data. Outputs for all the treebanks discussed in the paper are already provided, plus for the new Latin CIRCSE treebank. 
+
+The script and the tables are admittedly somewhat rough. We notice that, in order to read CoNLL-U files and extract data, an own Python "module" has been deployed, part of a suite developed by the author starting from 2018 which has not been published yet (but hopefully will at some point). Any suggestions to better integrate the code with already existing tools like Udapi are welcome.  
 
 * `ADV_advmod.tsv`: the distribution over parts of speech of all syntactic words receiving the `advmod` relation in the data, and, for every part of speech, the distribution over lemmas.
 * `ADV_coinc.tsv`: a list of `ADV` form types coinciding with forms of other parts of speech in the data, with the given part of speech, the lemma and morphological features of the coinciding form.
